@@ -1,8 +1,7 @@
 # jikexueyuan_Yao
-任务1~5代码丢失
 本仓库，任务1~5代码来自
 https://github.com/xiangsongtao/JiKeXueYuan
-
+（学习git时候任务1~5代码丢失）
 任务6及之后代码为本人所写。
 
 ## 目录
