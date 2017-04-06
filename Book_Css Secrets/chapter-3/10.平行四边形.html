@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .button {
+            transform: skewX(-45deg);
+            width: 100px;
+            height: 50px;
+            background: blue;
+            display: block;
+            left: 20px;
+            /*position: relative;*/
+        }
+        
+        .button>div {
+            color: #fff;
+            transform: skewX(45deg);
+            line-height: 50px;
+            text-align: center;
+        }
+        
+        .new {
+            margin-top: 20px;
+            position: relative;
+            color: #fff;
+            width: 100px;
+            height: 50px;
+            display: block;
+            line-height: 50px;
+            text-align: center
+        }
+        
+        .new::before {
+            /*用伪元素生成一个矩形*/
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background: #58a;
+            transform: skew(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="button">
+        <div>Click me!</div>
+    </a>
+    <a href="#" class="new">
+Click me!
+    </a>
+</body>
+
+</html>

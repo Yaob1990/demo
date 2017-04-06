@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>减少代码重复</title>
+    <style>
+        .old {
+            width: 50px;
+            height: 30px;
+            padding: 6px 16px;
+            border: 1px solid #446d88;
+            background: #58a linear-gradient(#77a0bb, #58a);
+            border-radius: 4px;
+            box-shadow: 0 1px 5px gray;
+            color: white;
+            text-shadow: 0 -1px 1px #335166;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        
+        .new {
+            /*line-height和字体大小存在依耐关系*/
+            /*默认父级为16px*/
+            width: 2.5em;
+            height: 1.5em;
+            font-size: 125%;
+            line-height: 1.5;
+            padding: 0.3em 0.8em;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: #58a linear-gradient(hsla(0, 0%, 100%, 0.2), transparent);
+            border-radius: 0.2em;
+            box-shadow: 0 0.05em 0.25em rgba(0, 0, 0, 0.5);
+            color: white;
+            text-shadow: 0 -0.05em 0.05em rgba(0, 0, 0, 0.5);
+        }
+        
+        .red {
+            /*line-height和字体大小存在依耐关系*/
+            /*默认父级为16px*/
+            width: 2.5em;
+            height: 1.5em;
+            font-size: 125%;
+            line-height: 1.5;
+            padding: 0.3em 0.8em;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: #58a linear-gradient(hsla(0, 0%, 100%, 0.2), transparent);
+            border-radius: 0.2em;
+            box-shadow: 0 0.05em 0.25em rgba(0, 0, 0, 0.5);
+            color: white;
+            text-shadow: 0 -0.05em 0.05em rgba(0, 0, 0, 0.5);
+            background-color: #c00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="old">Yes!</div>
+    <div class="new">Yes!</div>
+    <div class="red">Yes!</div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var sayHi;
+    var condition = true;
+    //    绝对不要这样做！
+    if (condition) {
+        sayHi=function() {
+            console.log("HI");
+        }
+    } else {
+        sayHi=function() {
+            console.log("Yo");
+        }
+    }
+
+    sayHi();
+
+</script>
+</body>
+</html>

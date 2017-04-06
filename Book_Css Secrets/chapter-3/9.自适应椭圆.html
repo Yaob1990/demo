@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            border-radius: 50%;
+        }
+        
+        .oval {
+            width: 200px;
+            height: 150px;
+            background: orange;
+            border-radius: 50% / 50%;
+            /*等于*/
+            /*border-radius: 100px / 75px;*/
+        }
+        
+        .halfOval {
+            width: 300px;
+            height: 150px;
+            background: orange;
+            border-radius: 50%/100% 100% 0 0;
+            /*
+            border-top-left-radius: 50% 100%;
+            border-top-right-radius: 50% 100%;
+            border-bottom-right-radius: 50% 0px;
+            border-bottom-left-radius: 50% 0px;
+            */
+        }
+        
+        .half_Oval {
+            width: 300px;
+            height: 150px;
+            background: orange;
+            border-radius: 100% 0 0 100%/50%;
+        }
+        
+        .quarter {
+            width: 300px;
+            height: 150px;
+            background: orange;
+            border-radius: 100% 0 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <p>圆形</p>
+    <div class="circle">
+    </div>
+    <p>椭圆形</p>
+    <div class="oval"></div>
+    <p>半椭圆</p>
+    <div class="halfOval">
+    </div>
+    <p>半椭圆</p>
+    <div class="half_Oval">
+    </div>
+    <p>半椭圆</p>
+    <div class="quarter">
+    </div>
+</body>
+
+</html>
