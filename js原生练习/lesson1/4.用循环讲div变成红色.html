@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>用循环讲div变成红色</title>
+    <style>
+        #out {
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #btn {
+            display: block;
+            margin: 0 auto;
+        }
+
+        #out div {
+            width: 100px;
+            height: 100px;
+            background: #000;
+            margin: 0 auto;
+            margin-top: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div id="out">
+    <button id="btn">点击改变颜色</button>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<script>
+
+    var div = document.getElementById("out").getElementsByTagName("div");
+    var btn = document.getElementById("btn");
+    //        for(i=0;i<div.length;i++){
+    //            btn[i].onclick=function () {
+    //                div[i].style.background="#ff5a30";
+    //            }
+    //        }
+
+    btn.onclick = function () {
+        for (var i = 0; i < div.length; i++) {
+
+                div[i].style.background = "#ff5a30";
+
+        }
+    }
+</script>
+</body>
+</html>

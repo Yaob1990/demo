@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>1.控制div属性</title>
+    <style>
+        .out{
+            width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #000;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="out">
+        <button>变宽</button>
+        <button>变高</button>
+        <button>变色</button>
+        <button>隐藏</button>
+        <button>重置</button>
+        <div id="div1"></div>
+    </div>
+    <script>
+        var btn=document.getElementsByTagName("button");
+        var div1=document.getElementById("div1");
+        //抽象出改变css的函数
+        var changeStyel=function (elem,attr,value) {
+            elem.style[attr]=value;
+        };
+        //css属性数组
+        var nStyle=["width","height","background","display"];
+        //css属性对应值
+        var nVal=["250px","250px","#c0ff55","none"];
+        //遍历
+        for(var i=0;i<btn.length;i++){
+            console.log(i);
+            //闭包，为了获得i的值
+            btn[i].index=i;
+            btn[i].onclick=function () {
+                //判断是否为最后一个重置按钮
+                if(this.index==btn.length-1){
+                    //重置为空
+                    div1.style.cssText="";
+                }else{
+                    changeStyel(div1,nStyle[this.index],nVal[this.index]);
+                }
+
+            }
+
+        }
+    </script>
+</body>
+</html>

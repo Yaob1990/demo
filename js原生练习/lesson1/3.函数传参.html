@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .out{
+            width: 500px;
+            height: 200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input{
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px;
+
+        }
+    </style>
+
+</head>
+<body>
+<div class="out">
+    <input type="text" value="江苏" id="input1">
+    <input type="text" value="淮安" id="input2">
+    <button id="btn">传参</button>
+</div>
+<script>
+    var btn=document.getElementById("btn");
+    var input1=document.getElementById("input1");
+    var input2 = document.getElementById("input2");
+    //
+//    function F(dom,a,b) {
+//        dom.onclick=function () {
+//            alert(a.value);
+//            alert(b.value);
+//        }
+//    }
+//    F(btn,input1,input2);
+
+    //这里得到的是默认的input value 不是输入内容
+    var c=input1.value;
+    var d=input2.value;
+    function F(dom,a,b) {
+        dom.onclick=function () {
+            alert(a);
+            alert(b);
+        }
+    }
+    F(btn,c,d);
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

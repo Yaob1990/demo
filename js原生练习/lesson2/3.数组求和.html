@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .out {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        input {
+            width: 200px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="out">
+    <input type="text" placeholder="输入数字求和，使用半角,隔开" id="input">
+    <button>求和</button>
+    <div id="sum"></div>
+</div>
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script>
+
+
+    //var input = document.getElementById("input");
+    var input=document.getElementsByTagName("input")[0];
+    var btn = document.getElementsByTagName("button")[0];
+    var sum = document.getElementById("sum");
+    var arr = [];
+
+//    btn.onclick = function () {
+//        var Sum = 0;
+//        arr = input.value.split(",");
+//        for (var i = 0; i < arr.length; i++) {
+//            Sum += parseInt(arr[i]);
+//        }
+//        sum.innerHTML = Sum;
+//    }
+
+    input.addEventListener("input", function () {
+        console.log("!11");
+        var Sum = 0;
+        arr = input.value.split(",");
+        for (var i = 0; i < arr.length; i++) {
+            Sum += parseInt(arr[i]);
+        }
+        sum.innerHTML = Sum;
+    })
+
+//    $("#input").bind('input', function () {
+//        console.log("11");
+//        var Sum = 0;
+//        arr = input.value.split(",");
+//        for (var i = 0; i < arr.length; i++) {
+//            Sum += parseInt(arr[i]);
+//        }
+//        sum.innerHTML = Sum;
+//    })
+
+
+
+
+</script>
+</body>
+</html>

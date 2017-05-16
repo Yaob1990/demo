@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>百度输入法</title>
+    <style>
+        .out{
+            width: 500px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        button{
+
+        }
+        .options{
+            margin-top:5px;
+            width: 40px;
+            text-align: center;
+            border: 1px solid blue;
+            display: none;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+            font-size: 12px;
+            color: blue;
+        }
+        li{
+            list-style: none;
+
+        }
+        li:hover{
+            background: #d97fff;
+        }
+    </style>
+</head>
+<body>
+<div class="out">
+    <button id="btn">输入法</button>
+    <div class="options" id="options">
+        <ul>
+            <li>手写</li>
+            <li>拼音</li>
+            <li>关闭</li>
+        </ul>
+    </div>
+</div>
+<script>
+    var btn=document.getElementById("btn");
+    var options=document.getElementById("options");
+    var li=document.getElementsByTagName("li");
+    btn.onclick=function () {
+        //这里如果首先判断none，得不到style.display的值
+        if(options.style.display=="block"){
+            options.style.display="none";
+        }else {
+            options.style.display="block";
+        }
+
+    }
+    li[2].onclick=function () {
+        options.style.display="none";
+    }
+
+</script>
+
+</body>
+</html>

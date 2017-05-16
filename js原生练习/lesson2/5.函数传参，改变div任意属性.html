@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper{
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+        }
+        #show{
+            width: 100px;
+            height: 100px;
+            background: #000;
+            margin: 0 auto;
+            margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+<p><label>属性名:</label><input type="text" value="background" id="name"></p>
+<p><label>属性值:</label><input type="text" value="black" id="newValue"></p>
+<button>确定</button>
+<button>重置</button>
+    <div id="show"></div>
+</div>
+<script>
+    var show=document.getElementById("show");
+    var btn=document.getElementsByTagName("button");
+    var changeStyel=function (elem,attr,value) {
+        elem.style[attr]=value;
+    };
+    btn[0].onclick=function () {
+        var name=document.getElementById('name').value;
+        var newValue=document.getElementById('newValue').value;
+        changeStyel(show,name,newValue)
+    };
+    btn[1].onclick=function () {
+        show.removeAttribute("style");
+    }
+</script>
+</body>
+</html>

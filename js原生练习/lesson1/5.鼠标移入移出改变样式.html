@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title> 鼠标移入/移出改变样式</title>
+    <style>
+        #out{
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+        }
+        #change{
+            width: 100px;
+            height: 100px;
+            background: #000;
+            margin: 0 auto;
+        }
+        .hover{
+            /*覆盖*/
+            background: #ffffff !important;
+
+            border: 20px solid rosybrown;
+        }
+    </style>
+</head>
+<body>
+    <div id="out">
+        <div id="change"></div>
+    </div>
+    <script>
+
+        var change=document.getElementById("change");
+        change.onmouseover=function () {
+            //直接替换class，有且仅有一个hover class
+            this.className="hover";
+        };
+        change.onmouseout=function () {
+            this.className="";
+        }
+
+
+    </script>
+</body>
+</html>

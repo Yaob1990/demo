@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            border:1px dotted #ff6445;
+            margin:5px;
+            text-decoration: none;
+            float: left;
+        }
+        .current{
+            opacity: .3;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div>
+        <ul>
+            <li><img src="img/1.jpg" alt=""></li>
+            <li><img src="img/2.jpg" alt=""></li>
+            <li><img src="img/3.jpg" alt=""></li>
+            <li><img src="img/4.jpg" alt=""></li>
+            <li><img src="img/5.jpg" alt=""></li>
+            <li><img src="img/6.jpg" alt=""></li>
+            <li><img src="img/7.jpg" alt=""></li>
+            <li><img src="img/8.jpg" alt=""></li>
+            <li><img src="img/9.jpg" alt=""></li>
+            <li><img src="img/10.jpg" alt=""></li>
+        </ul>
+    </div>
+</div>
+<script>
+    var img=document.getElementsByTagName("img");
+    /*for(var i =0;i<img.length;i++){
+        img[i].onmouseover=function () {
+            this.className="current";
+        };
+        img[i].onmouseout=function () {
+            this.className='';
+        };
+    }*/
+    var ArrayImg;
+    ArrayImg=[].slice.call(img);
+    console.log(ArrayImg);
+    ArrayImg.forEach(function (item) {
+        console.log(item);
+        item.onmouseover=function () {
+            this.className="current";
+        };
+        item.onmouseout=function () {
+            this.className='';
+        };
+    })
+
+</script>
+</body>
+</html>
