@@ -1,0 +1,9 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "jikexueyuan/任务9/nodeBaidu/package.json"
+      ]
+    }
+  }
+}
